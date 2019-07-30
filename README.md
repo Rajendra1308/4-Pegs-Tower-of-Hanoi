@@ -16,7 +16,7 @@ If only three pegs are allowed, we know that the best (minimum) number of moves 
 
 *5. Transfer the smallest n−k disks from Peg D to Peg B without disturbing the largest k disks on Peg B.In this step, all the four pegs can be used.*
 
-**T4(n) =T4(n−k)+T3(k)+T4(n−k) =2T4(n−k)+2^k−1.**
+**T4(n) =T4(n−k)+T3(k)+T4(n−k) =2T4(n−k)+2<sub>k</sub>−1.**
 
 
 **Function ToH3(i,j,p,q,r)** to transfer Disks i through j from Peg p to Peg q using a third Peg r.
