@@ -26,3 +26,5 @@ If only three pegs are allowed, we know that the best (minimum) number of moves 
 **Function ToH42(i, j, p, q, r, s, k)** to transfer Disks i through j from Peg p to Peg q using the two other pegs r and s. Here, we use a fixed value of k independent of the size m=j−i+1 of the subproblem posed to the recursive invocation. If m<=k, solve the problem using the 3-peg Tower-of-Hanoi algorithm. Otherwise, follow the **Frame–Stewart algorithm.**
 
 It turns out that the optimal choice fork is **{√2m}** for a recursive call on m disks, where **{x}** is theinteger nearest to x. As shown by **Stockmeyer**, this choice of k leads to **T<sub>4</sub>(n)≈√n2<sup>√(2n)</sup>.** Write a functionToH43(i,j,p,q,r,s) to implement this optimal version, where i,j,p,q,r,s (and m) are as explained above.
+
+![**TOWER OF HANOI **](https://slideplayer.com/slide/1517162/5/images/3/Tower+of+Hanoi+How+to+solve+the+4+pegs.jpg)
