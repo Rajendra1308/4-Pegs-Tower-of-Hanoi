@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void ToH3 (int m ,char p, char q, char r)
+void ToH3 (int m ,char p, char q, char r)                               // The basic 3 pegs ToH problem 
 {
     if(m==1)
     {
@@ -15,7 +15,7 @@ void ToH3 (int m ,char p, char q, char r)
     ToH3 (m - 1 , r, q, p);
 }
 
-void ToH4 ( int n ,char  p , char q ,char r,char s)
+void ToH4 ( int n ,char  p , char q ,char r,char s)                    // Similarly 4 pegs ToH problem solved
 {
     if(n==0)
         return;
@@ -36,17 +36,17 @@ void ToH4 ( int n ,char  p , char q ,char r,char s)
 
 }
 
-void ToH41 (int i , int j , char a , char b, char c, char d)
+void ToH41 (int i , int j , char a , char b, char c, char d)                            // Better way to solve the ToH problem efficiently using ToH4 and ToH3 functions.
 {
     int m = j - i +1;
-    int k = floor(m/2);
+    int k = floor(m/2);                                                                 // Average case time complexity
     ToH4 (m - k ,a , d , b ,c);
     ToH3 (k , a , b , c);
     ToH4 (m- k , d ,b , a,c);
     cout << endl;
 }
 
-void ToH42 (int i , int j ,char a , char b, char c, char d, int k)
+void ToH42 (int i , int j ,char a , char b, char c, char d, int k)                      // Much better than ToH41 by taking as input from user.
 {
     int m = j - i + 1;
     if ( m <= k)
@@ -59,7 +59,7 @@ void ToH42 (int i , int j ,char a , char b, char c, char d, int k)
     }
     cout <<endl;
 }
-void ToH43 (int i , int j , char a, char b , char c, char d)
+void ToH43 (int i , int j , char a, char b , char c, char d)                             // The most optimal method. Developed first by Stockmeyer.Using k=sqrt(2m).
 {
     int m = j - i + 1;
     int k = sqrt(2*m);
@@ -69,7 +69,7 @@ void ToH43 (int i , int j , char a, char b , char c, char d)
 }
 
 
-
+// UTILITY FUNCTIONS
 int main()
 {
     int n ,k;
