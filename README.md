@@ -6,10 +6,14 @@ There are four pegs A,B,C,D(numbered as 0,1,2,3). Initially, n disks of diameter
 
 If only three pegs are allowed, we know that the best (minimum) number of moves is T3(n) =2^n−1, and a ***straight forward divide-and-conquer algorithm*** solves the 3-peg puzzle using exactly these many moves. If we are allowed to use a fourth peg, the **Frame–Stewart algorithm** is used, which involves the following steps(also see the figure on the next page).
 
-*1. If n<=3, solve the problem directly.
-2. Fix a value of k in the range 1<= k <= n.
-*3. Keep the k largest disks on Peg A, and transfer the smallest n−k disks from Peg A to Peg D.
-4. Transfer the largest k disks from Peg A to Peg B without disturbing the smallest n−k disks already sitting on Peg D. Since a larger disk can never be put on the top of a smaller disk, Peg D is unusable in this part, that is, we solve the 3-peg Tower-of-Hanoi problem on k disks.
+*1. If n<=3, solve the problem directly.*
+
+*2. Fix a value of k in the range 1<= k <= n.*
+
+*3. Keep the k largest disks on Peg A, and transfer the smallest n−k disks from Peg A to Peg D.*
+
+*4. Transfer the largest k disks from Peg A to Peg B without disturbing the smallest n−k disks already sitting on Peg D. Since a larger disk can never be put on the top of a smaller disk, Peg D is unusable in this part, that is, we solve the 3-peg Tower-of-Hanoi problem on k disks.*
+
 *5. Transfer the smallest n−k disks from Peg D to Peg B without disturbing the largest k disks on Peg B.In this step, all the four pegs can be used.*
 
 **T4(n) =T4(n−k)+T3(k)+T4(n−k) =2T4(n−k)+2^k−1.**
