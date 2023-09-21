@@ -68,6 +68,9 @@ void ToH43 (int i , int j , char a, char b , char c, char d)                    
     ToH4 (m- k , d ,b , a,c);
 }
 
+void greet(){
+    cout<<"Hello this is the new function"<<endl;
+}
 
 // UTILITY FUNCTIONS
 int main()
